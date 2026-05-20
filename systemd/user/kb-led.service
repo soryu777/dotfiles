@@ -1,0 +1,10 @@
+# ~/.config/systemd/user/kb-led.service
+[Unit]
+Description=Keyboard LED Controller
+
+[Service]
+ExecStart=/usr/bin/python /home/soryu/.config/hypr/scripts/led-daemon.py
+Restart=always
+
+[Install]
+WantedBy=default.target
